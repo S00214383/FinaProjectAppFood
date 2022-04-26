@@ -11,7 +11,7 @@ namespace FinaProjectAppFood
     {
 
         //properties
-        public int CountryID { get; set; }
+        public int CountriesID { get; set; }
 
         public string CountryName { get; set; }
 
@@ -40,6 +40,7 @@ namespace FinaProjectAppFood
     {
         public DishData() : base("MyDishData1820") {   }
 
-        public DbSet<Countries> CountriesInfos { get; set; }
+        public DbSet<Countries> CountriesDishes { get; set; }
+        public object Countries { get; set; }
     }
 }

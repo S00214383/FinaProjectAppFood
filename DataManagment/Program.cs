@@ -39,8 +39,8 @@ namespace DataManagment
 
 
 
-                db.CountriesInfos.Add(c1);
-                db.CountriesInfos.Add(c2);
+                db.CountriesDishes.Add(c1);
+              
 
 
                 db.SaveChanges();
