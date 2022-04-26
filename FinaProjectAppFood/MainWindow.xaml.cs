@@ -54,5 +54,20 @@ namespace FinaProjectAppFood
 
             //update display
         }
+
+        //filter method
+        private void RadioButton_Click(object sender, RoutedEventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+
+            string diettype = rb.Content.ToString();
+
+            switch (diettype)
+            {
+                case "Vegetarian":
+                    lbxCountries.ItemsSource = allCountries.Where(c => c.TraditionalDish.Contains("TE"));
+                    break;
+            }
+        }
     }
 }
