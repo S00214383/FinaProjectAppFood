@@ -14,7 +14,7 @@ namespace UnitTestProject1
 
 
             //act
-            c1.RateDish(4);
+            c1.RateDish(5);
 
 
             //assert

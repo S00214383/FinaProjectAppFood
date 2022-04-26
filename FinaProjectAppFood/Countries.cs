@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,8 @@ namespace FinaProjectAppFood
     {
 
         //properties
+        public int CountryID { get; set; }
+
         public string CountryName { get; set; }
 
         public string  TraditionalDish { get; set; }
@@ -17,6 +20,8 @@ namespace FinaProjectAppFood
         public string  Continent { get; set; }
 
         public int Rate { get; set; }
+
+        public string DishImage { get; set; }
 
 
 
@@ -29,5 +34,12 @@ namespace FinaProjectAppFood
             Rate += rateToAdd;
         }
 
+    }//end of Countries Class
+
+    public class DishData:DbContext
+    {
+        public DishData() : base("MyDishData1820") {   }
+
+        public DbSet<Countries> CountriesInfos { get; set; }
     }
 }
