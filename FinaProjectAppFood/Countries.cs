@@ -16,12 +16,18 @@ namespace FinaProjectAppFood
 
         public string  Continent { get; set; }
 
+        public int Rate { get; set; }
+
 
 
 
         //constructors
 
         //methods
+        public void RateDish(int rateToAdd)
+        {
+            Rate += rateToAdd;
+        }
 
     }
 }
