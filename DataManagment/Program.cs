@@ -40,6 +40,7 @@ namespace DataManagment
 
 
                 db.CountriesDishes.Add(c1);
+                db.CountriesDishes.Add(c2);
               
 
 

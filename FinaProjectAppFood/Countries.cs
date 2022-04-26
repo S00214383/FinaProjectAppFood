@@ -34,6 +34,24 @@ namespace FinaProjectAppFood
             Rate += rateToAdd;
         }
 
+        //override method
+        public override string ToString()
+        {
+            return CountryName;
+        }
+
+        public string GetDetails()
+        {
+            return $"Country Name: {CountryName}\n"  +
+                $"Continent: {Continent}\n" +
+                $"Dish: {TraditionalDish}\n" +
+                $"Rate: {Rate}";
+                
+
+
+        }
+
+
     }//end of Countries Class
 
     public class DishData:DbContext

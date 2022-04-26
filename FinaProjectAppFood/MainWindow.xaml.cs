@@ -20,9 +20,39 @@ namespace FinaProjectAppFood
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Countries> allCountries;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            DishData db = new DishData();
+
+            var query = from d in db.CountriesDishes
+                        orderby d.CountryName
+                        select d;
+
+            allCountries = query.ToList();
+
+            lbxCountries.ItemsSource = allCountries;
+        }
+
+        private void lbxCountries_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //determine  what was selected
+            Countries selected = lbxCountries.SelectedItem as Countries;
+
+            //check if it is not null
+            if (selected != null)
+            {
+                //update display
+                tblkDishDetails.Text = selected.GetDetails();
+                imgDish.Source = new BitmapImage(new Uri(selected.DishImage, UriKind.Relative));
+            }
+
+            //update display
         }
     }
 }
