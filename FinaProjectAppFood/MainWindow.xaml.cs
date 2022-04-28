@@ -60,14 +60,38 @@ namespace FinaProjectAppFood
         {
             RadioButton rb = sender as RadioButton;
 
-            string diettype = rb.Content.ToString();
+            string continent = rb.Content.ToString();
 
-            switch (diettype)
+            switch (continent)
             {
-                case "Vegetarian":
-                    lbxCountries.ItemsSource = allCountries.Where(c => c.TraditionalDish.Contains("TE"));
+                
+
+                case "Asia":
+                    lbxCountries.ItemsSource = allCountries.Where(c => c.Continent.Contains("Asia"));
+                    break;
+                case "Europe":
+                    lbxCountries.ItemsSource = allCountries.Where(c => c.Continent.Contains("Europe"));
+                    break;
+                case "Central America":
+                    lbxCountries.ItemsSource = allCountries.Where(c => c.Continent.Contains("Central America"));
+                    break;
+                case "South America":
+                    lbxCountries.ItemsSource = allCountries.Where(c => c.Continent.Contains("South America"));
+                    break;
+
+                case "Oceania":
+                    lbxCountries.ItemsSource = allCountries.Where(c => c.Continent.Contains("Oceania"));
+                    break;
+
+                default:
+                    lbxCountries.ItemsSource = allCountries;
                     break;
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

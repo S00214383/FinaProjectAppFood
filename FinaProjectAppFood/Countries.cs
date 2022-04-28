@@ -23,6 +23,8 @@ namespace FinaProjectAppFood
 
         public string DishImage { get; set; }
 
+        //public string Diet { get; set; }
+
 
 
 
@@ -45,6 +47,7 @@ namespace FinaProjectAppFood
             return $"Country Name: {CountryName}\n"  +
                 $"Continent: {Continent}\n" +
                 $"Dish: {TraditionalDish}\n" +
+             
                 $"Rate: {Rate}";
                 
 

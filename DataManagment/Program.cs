@@ -23,6 +23,7 @@ namespace DataManagment
                     Continent = "South America",
                     TraditionalDish = "Feijoada",
                     Rate = 5,
+                
                     DishImage = "/images/feijoada.jpg"
 
                 };
@@ -33,6 +34,7 @@ namespace DataManagment
                     Continent = "Central America",
                     TraditionalDish = "Chilaquiles",
                     Rate = 5,
+                    
                     DishImage = "/images/chilaquiles.jpg"
 
                 };
@@ -43,6 +45,7 @@ namespace DataManagment
                     Continent = "Europe",
                     TraditionalDish = "Ratatouille",
                     Rate = 5,
+                
                     DishImage = "/images/ratatouille.jpg"
 
                 };
@@ -53,6 +56,7 @@ namespace DataManagment
                     Continent = "Europe",
                     TraditionalDish = "Spatzle",
                     Rate = 5,
+              
                     DishImage = "/images/spatzle.jpg"
 
                 };
@@ -63,6 +67,7 @@ namespace DataManagment
                     Continent = "Asia",
                     TraditionalDish = "Kung Pao Chicken",
                     Rate = 5,
+                 
                     DishImage = "/images/kungpao.jpg"
 
                 };
@@ -73,6 +78,7 @@ namespace DataManagment
                     Continent = "Asia",
                     TraditionalDish = "Iasooni Tikka Chicken",
                     Rate = 5,
+                  
                     DishImage = "/images/tikka.jpg"
 
                 };
@@ -82,6 +88,7 @@ namespace DataManagment
                     Continent = "Africa",
                     TraditionalDish = "Bobotie",
                     Rate = 5,
+              
                     DishImage = "/images/bobotie.jpg"
 
                 }; 
@@ -91,6 +98,7 @@ namespace DataManagment
                     Continent = "Africa",
                     TraditionalDish = "Tagine",
                     Rate = 5,
+                
                     DishImage = "/images/tagine.jpg"
 
                 };
@@ -100,6 +108,7 @@ namespace DataManagment
                     Continent = "Oceania",
                     TraditionalDish = "Lamb leg Roast",
                     Rate = 5,
+                   
                     DishImage = "/images/lambleg.jpg"
 
                 };
@@ -110,6 +119,7 @@ namespace DataManagment
                     Continent = "Oceania",
                     TraditionalDish = "Kokoda",
                     Rate = 5,
+                   
                     DishImage = "/images/kokoda.jpg"
 
                 };
@@ -129,7 +139,7 @@ namespace DataManagment
                 db.CountriesDishes.Add(c8);
                 db.CountriesDishes.Add(c9);
                 db.CountriesDishes.Add(c10);
-              
+
 
 
                 db.SaveChanges();
