@@ -20,7 +20,7 @@ namespace FinaProjectAppFood
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<Countries> allCountries;
+       public   List<Countries> allCountries;
         public MainWindow()
         {
             InitializeComponent();
@@ -50,6 +50,7 @@ namespace FinaProjectAppFood
                 //update display
                 tblkDishDetails.Text = selected.GetDetails();
                 imgDish.Source = new BitmapImage(new Uri(selected.DishImage, UriKind.Relative));
+                tbkMethod.Text = selected.Diet;
             }
 
             //update display
@@ -89,9 +90,34 @@ namespace FinaProjectAppFood
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnRecipe_Click(object sender, RoutedEventArgs e)
         {
+
+
             
+
+            //create second windon
+            Recipes recipesWindow = new Recipes();
+
+            //connection
+            recipesWindow.Owner = this;
+
+            recipesWindow.ShowDialog();
+
+
+            //determine  what was selected
+            Countries selected = lbxCountries.SelectedItem as Countries;
+
+            //check if it is not null
+            if (selected != null)
+            {
+                //update display
+                tblkDishDetails.Text = selected.GetDetails();
+                imgDish.Source = new BitmapImage(new Uri(selected.DishImage, UriKind.Relative));
+                tbkMethod.Text = selected.Diet;
+            }
+
+            //update display
         }
     }
 }

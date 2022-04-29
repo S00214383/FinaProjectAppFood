@@ -1,0 +1,19 @@
+﻿<Window x:Class="FinaProjectAppFood.Recipes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinaProjectAppFood"
+        mc:Ignorable="d"
+        Title="Recipes" Height="450" Width="800"
+       
+         Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}">
+    <Grid>
+        <Label Content="Choose diet " HorizontalAlignment="Left" Margin="47,64,0,0" VerticalAlignment="Top"/>
+        <Button Content="Add Receipe" HorizontalAlignment="Left" Margin="106,230,0,0" VerticalAlignment="Top" Width="193" Click="Button_Click"/>
+        <ComboBox x:Name="cbxDiet" HorizontalAlignment="Left" Margin="179,63,0,0" VerticalAlignment="Top" Width="120" />
+        <ListBox x:Name="lbxInstructions" HorizontalAlignment="Left" Height="223" Margin="499,85,0,0" VerticalAlignment="Top" Width="187" />
+
+    </Grid>
+</Window>

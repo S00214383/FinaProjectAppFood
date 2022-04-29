@@ -23,7 +23,7 @@ namespace DataManagment
                     Continent = "South America",
                     TraditionalDish = "Feijoada",
                     Rate = 5,
-                
+                   
                     DishImage = "/images/feijoada.jpg"
 
                 };

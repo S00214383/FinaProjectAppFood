@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:FinaProjectAppFood"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
         Loaded="Window_Loaded"
         
               Background="{DynamicResource MaterialDesignPaper}"
@@ -13,30 +14,30 @@
 
     <Grid Margin="0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="53*"/>
-            <RowDefinition Height="263*"/>
-            <RowDefinition Height="105*"/>
+            <RowDefinition Height="110*"/>
+            <RowDefinition Height="311*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="128*"/>
             <ColumnDefinition Width="269*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="77,10,66,10" Width="651" Grid.ColumnSpan="2">
-            <RadioButton Content="All Countries" Margin="5"  Width="100" GroupName="continent" Click="RadioButton_Click"/>
-            <RadioButton Content="Asia" Margin="5"  Width="100" GroupName="continent" Click="RadioButton_Click"/>
-
+        <StackPanel Grid.Row="0" Orientation="Horizontal"  Margin="56,48,87,10" Grid.ColumnSpan="2">
+            <RadioButton Content="All Countries" Margin="5"  Width="95" GroupName="continent" Click="RadioButton_Click"/>
+            <RadioButton Content="Asia" Margin="5"  Width="50" GroupName="continent" Click="RadioButton_Click"/>
             <RadioButton Content="Europe" Margin="5" Width="100" GroupName="continent" Click="RadioButton_Click"/>
-            <RadioButton Content="Central America" Margin="5" Width="114" GroupName="continent" Click="RadioButton_Click"/>
+            <RadioButton Content="Central America" Margin="5" Width="120" GroupName="continent" Click="RadioButton_Click"/>
             <RadioButton Content="South America"  Margin="5" Width="100" GroupName="continent" Click="RadioButton_Click"/>
             <RadioButton Content="Oceania" Width="100" Margin="5" GroupName="continent" Click="RadioButton_Click"/>
         </StackPanel>
-        <ListBox Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" Margin="5" Name="lbxCountries" SelectionChanged="lbxCountries_SelectionChanged"/>
+
+        <ListBox Grid.Row="1" Grid.Column="0" Margin="5" Name="lbxCountries" SelectionChanged="lbxCountries_SelectionChanged"/>
         <!--<TextBlock x:Name="txtblk_Select_Country"  HorizontalAlignment="Left" Margin="5,20,0,0" TextWrapping="Wrap" Text="Select by Continent:" VerticalAlignment="Top" Height="24" Width="112"/>-->
         <!--  <ComboBox x:Name="cbxContinent" HorizontalAlignment="Left" Margin="114,15,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbxContinent_SelectionChanged" Height="25"/> -->
-        <TextBlock Grid.Row="2" Grid.Column="1" Margin="5,5,190,5" x:Name="tblkDishDetails" TextWrapping="Wrap"><InlineUIContainer>
+        <TextBlock Grid.Row="1" Grid.Column="1" Margin="10,10,286,180" x:Name="tblkDishDetails" TextWrapping="Wrap"><InlineUIContainer>
                
             </InlineUIContainer></TextBlock>
-        <Image Grid.Row="1" Grid.Column="1" Margin="5" Name="imgDish"/>
-        <Button x:Name="btnRecipe" Content="Recipe" Grid.Column="1" HorizontalAlignment="Left" Margin="397,41,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Image Grid.Row="1" Grid.Column="1" Margin="257,5,31,77" Name="imgDish"/>
+        <Label x:Name="lblRecipe" Content="Recipe Inspiration App" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="213" FontSize="20" Grid.Column="1" Height="35"/>
+        <TextBlock x:Name="tbkMethod" Grid.Column="1" HorizontalAlignment="Left" Margin="26,154,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="126" Width="187"/>
     </Grid>
 </Window>

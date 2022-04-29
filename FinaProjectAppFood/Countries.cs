@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FinaProjectAppFood
 {
-   public class Countries
+   public class Countries 
     {
 
         //properties
@@ -23,7 +23,9 @@ namespace FinaProjectAppFood
 
         public string DishImage { get; set; }
 
-        //public string Diet { get; set; }
+        public string Diet { get; set; }
+
+        //public string Method { get; set; }
 
 
 
@@ -46,15 +48,22 @@ namespace FinaProjectAppFood
         {
             return $"Country Name: {CountryName}\n"  +
                 $"Continent: {Continent}\n" +
-                $"Dish: {TraditionalDish}\n" +
-             
+                $"Dish: {TraditionalDish}\n" +             
+                $"Diet: {Diet}\n" +             
+             //   $"MEthod: {Method}\n" +             
+               
                 $"Rate: {Rate}";
+
+
                 
 
 
         }
 
-
+        public int CompareTo(object obj)
+        {
+            throw new NotImplementedException();
+        }
     }//end of Countries Class
 
     public class DishData:DbContext
